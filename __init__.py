@@ -9,6 +9,9 @@ class DigitalWife(MycroftSkill):
     def handle_wife_digital(self, message):
         self.speak_dialog('wife')
 
+    @intent_file_handler('mother.intent')
+    def handle_mother_digital(self, message):
+        self.speak_dialog('mother')
 
 def create_skill():
     return DigitalWife()
